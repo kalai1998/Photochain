@@ -1,0 +1,77 @@
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Photo Chain</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../static/vendors/feather/feather.css">
+  <link rel="stylesheet" href="../static/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../static/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../static/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../static/images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+      <div class="content-wrapper d-flex align-items-center auth px-0">
+        <div class="row w-100 mx-0">
+          <div class="col-lg-8 mx-auto">
+            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+              <div class="brand-logo">
+              <h3>Photo Chain</h3>
+              </div>
+              
+
+			<h3>Face Templates </h3>
+		 <div align="center" style="width:100%; height:500px; overflow:auto">
+	
+	<div class="row">
+	{% for x in result %}
+	<div class="col-md-2">
+    <img src="../static/frame/{{x[2]}}" width="80" height="80">
+	</div>
+	{%endfor%}
+ 	</div>
+ 		</div>
+ 
+ 	<form name="form1" method="post">
+	<input type="hidden" name="vid" value="{{ vid }}">
+	<input type="submit" class="btn-outline-primary" name="btn" value="Training">
+	</form>
+	{% if uname=="1" %}
+                 <a href="/" class="text-primary">Home</a>
+				 {% else %}
+				  <a href="/userhome" class="text-primary">Home</a>
+				 {% endif %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../static/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../static/js/off-canvas.js"></script>
+  <script src="../static/js/hoverable-collapse.js"></script>
+  <script src="../static/js/template.js"></script>
+  <script src="../static/js/settings.js"></script>
+  <script src="../static/js/todolist.js"></script>
+  <!-- endinject -->
+</body>
+
+</html>
